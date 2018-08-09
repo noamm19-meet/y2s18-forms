@@ -11,7 +11,7 @@ session = DBSession()
 def add_student(name, year, finished_lab):
 	"""
 	Add a student to the database, given
-	their name, year, and whether they have
+	their name, year, and whether they have127.0.0.1:5000
 	finished the lab.
 	"""
 	student_object = Student(
@@ -60,3 +60,5 @@ def query_by_id(student_id):
     student = session.query(Student).filter_by(
         student_id=student_id).first()
     return student
+
+add_student('noam', '2' , 'true')
